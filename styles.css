@@ -67,9 +67,9 @@ body {
 .quote-author {
   font-weight: bold;
 }
-#toggle-fav-btn {
+/* #toggle-fav-btn {
   display: none;
-}
+} */
 /* Кнопка генерации новой цитаты */
 .btn {
   background-color: #007bff;
