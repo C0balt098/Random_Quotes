@@ -1,13 +1,10 @@
 import { handleFavourite } from "./favorites.js";
 
 import { generateRandomeInt } from "../utils.js";
-import quotes from "../data/quotes.js";
 
-let currentQuote = null;
-
-function handleQuote() {
+function handleQuote(quotes, setCurrentQuote) {
   const randomQuote = chooseRandomQuote(quotes);
-  currentQuote = randomQuote;
+  setCurrentQuote(randomQuote);
   displayQuote(randomQuote);
 }
 function displayQuote(quote) {
@@ -23,4 +20,4 @@ function chooseRandomQuote(quotes) {
   const randomIndex = generateRandomeInt(quotes.length);
   return quotes[randomIndex];
 }
-export { handleQuote, currentQuote };
+export { handleQuote };
