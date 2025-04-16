@@ -1,13 +1,5 @@
-import { currentQuote } from "../../index.js";
-import quotes from "../data/quotes.js";
+import favoriteBtn from "../../index.js";
 
-const favoriteBtn = document.getElementById("fav-btn");
-favoriteBtn.addEventListener("click", () =>
-  toggleFavorite(currentQuote, favoriteBtn, favoritesContainer)
-);
-hidebtn(favoriteBtn);
-
-const favoritesContainer = document.getElementById("favorites-container");
 ///
 function toggleFavorite(quote, btn, container) {
   quote.isFavorite = !quote.isFavorite;
@@ -20,7 +12,7 @@ function toggleFavorite(quote, btn, container) {
 }
 
 function handleFavourite(isFavorite) {
-  showBtn(favoriteBtn);
+  showFavouriteBtn(favoriteBtn);
   toggleFavoriteBtnIcon(isFavorite, favoriteBtn);
 }
 function toggleFavoriteBtnIcon(isFavorite, element) {
@@ -28,11 +20,11 @@ function toggleFavoriteBtnIcon(isFavorite, element) {
   element.classList.toggle("far", !isFavorite);
 }
 
-function showBtn(btn) {
+function showFavouriteBtn(btn) {
   btn.style.display = "inline-block";
 }
 
-function hidebtn(btn) {
+function hideFavoriteBtn(btn) {
   btn.style.display = "none";
 }
 
@@ -52,4 +44,4 @@ function hideFavoriteCard(quote) {
   });
 }
 
-export { handleFavourite };
+export { handleFavourite, toggleFavorite, hideFavoriteBtn };
