@@ -1,4 +1,3 @@
-
 import quotes from "./src/data/quotes.js";
 import { toggleFavorite, hideFavoriteBtn } from "./src/handlers/favorites.js";
 import { handleQuote } from "./src/handlers/quote.js";
@@ -19,4 +18,4 @@ const generateBtn = document.getElementById("generate-btn");
 generateBtn.addEventListener("click", () =>
   handleQuote(quotes, setCurrentQuote)
 );
-export default favoriteBtn
+export default favoriteBtn;
