@@ -1,4 +1,3 @@
-// Массив цитат
 const quotes = [
   {
     id: "a1b2c3d4",

@@ -1,13 +1,13 @@
-import quotes from "./data/quotes";
+import quotes from "./data/quotes.js";
 
 function generateRandomeInt(maxInt) {
   return Math.floor(Math.random() * maxInt);
 }
-// function addUniqueIds(array) {
-//   array.forEach((item, index) => {
-//     generateRandomeId;
-//   });
-// }
+function addUniqueIds(array) {
+  array.forEach((item, index) => {
+    generateRandomeId;
+  });
+}
 function generateRandomeId() {
   return Math.floor(Math.random() * 0xffffffff)
     .toString(16)

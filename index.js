@@ -8,14 +8,14 @@ function setCurrentQuote(quote) {
   currentQuote = quote;
 }
 const favoritesContainer = document.getElementById("favorites-container");
-const favoriteBtn = document.getElementById("fav-btn");
-hideFavoriteBtn(favoriteBtn);
-favoriteBtn.addEventListener("click", () =>
-  toggleFavorite(currentQuote, favoriteBtn, favoritesContainer)
+const quoteFavoriteBtn = document.getElementById("quote-fav-btn");
+hideFavoriteBtn();
+quoteFavoriteBtn.addEventListener("click", () =>
+  toggleFavorite(currentQuote, quoteFavoriteBtn, favoritesContainer)
 );
 
 const generateBtn = document.getElementById("generate-btn");
 generateBtn.addEventListener("click", () =>
   handleQuote(quotes, setCurrentQuote)
 );
-export default favoriteBtn;
+export { quoteFavoriteBtn };

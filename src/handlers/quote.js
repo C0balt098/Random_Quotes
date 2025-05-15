@@ -8,10 +8,13 @@ function handleQuote(quotes, setCurrentQuote) {
   displayQuote(randomQuote);
 }
 function displayQuote(quote) {
-  const { text, author: quoteAuthor, isFavorite } = quote;
+  const { id, text, author: quoteAuthor, isFavorite } = quote;
   const quoteElement = document.getElementById("quote");
+  const quoteTextElement = document.getElementById("quote-text");
   const quoteAuthorElement = document.getElementById("quote-author");
-  quoteElement.textContent = text;
+  // HTML atribute data-current-quote-id will be added
+  quoteElement.dataset.currentQuoteId = id;
+  quoteTextElement.textContent = text;
   quoteAuthorElement.textContent = quoteAuthor;
   handleFavourite(isFavorite);
 }
